@@ -1,0 +1,21 @@
+@use 'vars';
+@use 'main';
+@use 'footer';
+@use 'header';
+
+html, body {
+    box-sizing: border-box;
+    background: vars.$default;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}

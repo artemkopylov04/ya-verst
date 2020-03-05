@@ -1,0 +1,25 @@
+@use 'vars';
+
+.footer {
+    flex-shrink: 0;
+    background: #F0F2F3;
+
+    &__content {
+        height: 32px;
+        margin: 0 auto;
+        max-width: vars.$breakpoint;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        margin-right: 12px;
+        color: #7F8285;
+        letter-spacing: 0.06px;
+
+        &_rights {
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+}

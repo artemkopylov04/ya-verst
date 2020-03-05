@@ -1,0 +1,43 @@
+@use 'vars';
+
+.header {
+    &__content {
+        height: 50px;
+        max-width: vars.$breakpoint;
+        display: flex;
+        margin: 0 auto;
+        color: #000;
+        align-items: center;
+    }
+
+    &__repo-name {
+        flex: 1;
+        letter-spacing: 0.25px;
+    }
+
+    &__rebuild-button {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #E6E6E6;
+        width: 84px;
+        height: 28px;
+        border-radius: 4px;
+    }
+
+    &__rebuild-button-icon {
+    }
+
+    &__settings-button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-left: 8px;
+        background: #E6E6E6;
+        width: 28px;
+        height: 28px;
+    }
+}

@@ -1,0 +1,17 @@
+@use 'vars';
+
+.main {
+    flex-grow: 1;
+
+    &__content {
+        max-width: vars.$breakpoint;
+        margin: 0 auto;
+    }
+}
+
+.build-info {
+    height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 1px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
+    border-radius: 6px;
+}
