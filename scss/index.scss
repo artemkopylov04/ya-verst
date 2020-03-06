@@ -1,7 +1,10 @@
 @use 'vars';
+@use 'fonts';
+@use 'layout';
 @use 'main';
 @use 'footer';
 @use 'header';
+@use 'dash';
 
 html, body {
     box-sizing: border-box;
@@ -10,12 +13,12 @@ html, body {
     height: 100%;
 }
 
-* {
-    box-sizing: inherit;
-}
-
-.page {
-    min-height: 100%;
+body {
+    font-family: 'YS Text', Arial, sans-serif;
     display: flex;
     flex-direction: column;
+}
+
+* {
+    box-sizing: inherit;
 }

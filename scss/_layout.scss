@@ -1,0 +1,26 @@
+.layout {
+	display: flex;
+	flex-direction: column;
+
+	&__container {
+        width: 100%;
+
+		&_align {
+			&_center {
+				margin: 0 auto;
+			}
+		}
+
+		&_size {
+			&_desktop {
+                max-width: 824px;
+            }
+		}
+    }
+    
+    &__height {
+        &_100 {
+            height: 100%;
+        }
+    }
+}

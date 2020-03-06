@@ -1,14 +1,3 @@
-@use 'vars';
-
-.main {
-    flex-grow: 1;
-
-    &__content {
-        max-width: vars.$breakpoint;
-        margin: 0 auto;
-    }
-}
-
 .build-info {
     height: 100px;
     background: #FFFFFF;

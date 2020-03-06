@@ -1,0 +1,15 @@
+.dash {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__message {
+        width: 264px;
+        height: 32px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 125%;
+    }
+}

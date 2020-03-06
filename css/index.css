@@ -1,9 +1,39 @@
-.main {
-  flex-grow: 1;
+@font-face {
+  font-family: "YS Text";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url(//yastatic.net/s3/home/fonts/ys/1/text-regular.woff2) format("woff2"), url(//yastatic.net/s3/home/fonts/ys/1/text-regular.woff) format("woff");
 }
-.main__content {
-  max-width: 824px;
+@font-face {
+  font-family: "YS Text";
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  src: url(//yastatic.net/s3/home/fonts/ys/1/text-medium.woff2) format("woff2"), url(//yastatic.net/s3/home/fonts/ys/1/text-medium.woff) format("woff");
+}
+@font-face {
+  font-family: "YS Text";
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url(//yastatic.net/s3/home/fonts/ys/1/text-bold.woff2) format("woff2"), url(//yastatic.net/s3/home/fonts/ys/1/text-bold.woff) format("woff");
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+.layout__container {
+  width: 100%;
+}
+.layout__container_align_center {
   margin: 0 auto;
+}
+.layout__container_size_desktop {
+  max-width: 824px;
+}
+.layout__height_100 {
+  height: 100%;
 }
 
 .build-info {
@@ -14,13 +44,13 @@
 }
 
 .footer {
-  flex-shrink: 0;
   background: #F0F2F3;
+  margin-top: auto;
 }
 .footer__content {
+  font-size: 13px;
+  line-height: 16px;
   height: 32px;
-  margin: 0 auto;
-  max-width: 824px;
   display: flex;
   align-items: center;
 }
@@ -29,22 +59,35 @@
   color: #7F8285;
   letter-spacing: 0.06px;
 }
-.footer__link_rights {
+.footer__link_pointer {
+  cursor: pointer;
+}
+.footer__link_pointer:hover {
+  color: #E00000;
+}
+.footer__link_last {
   margin-right: 0;
   margin-left: auto;
 }
 
 .header__content {
   height: 50px;
-  max-width: 824px;
   display: flex;
-  margin: 0 auto;
   color: #000;
   align-items: center;
+  justify-content: space-between;
 }
 .header__repo-name {
-  flex: 1;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
   letter-spacing: 0.25px;
+}
+.header__repo-name_desktop {
+  color: #7F8285;
+}
+.header__header-buttons {
+  display: flex;
 }
 .header__rebuild-button {
   cursor: pointer;
@@ -55,6 +98,9 @@
   width: 84px;
   height: 28px;
   border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
 }
 .header__settings-button {
   cursor: pointer;
@@ -64,8 +110,26 @@
   border-radius: 4px;
   margin-left: 8px;
   background: #E6E6E6;
-  width: 28px;
   height: 28px;
+  width: 87px;
+}
+.header__settings-button_only-icon {
+  width: 28px;
+}
+
+.dash {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.dash__message {
+  width: 264px;
+  height: 32px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 125%;
 }
 
 html, body {
@@ -75,12 +139,12 @@ html, body {
   height: 100%;
 }
 
-* {
-  box-sizing: inherit;
-}
-
-.page {
-  min-height: 100%;
+body {
+  font-family: "YS Text", Arial, sans-serif;
   display: flex;
   flex-direction: column;
+}
+
+* {
+  box-sizing: inherit;
 }

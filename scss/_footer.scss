@@ -1,13 +1,12 @@
-@use 'vars';
-
 .footer {
-    flex-shrink: 0;
     background: #F0F2F3;
+    margin-top: auto;
 
     &__content {
+        font-size: 13px;
+        line-height: 16px;
+
         height: 32px;
-        margin: 0 auto;
-        max-width: vars.$breakpoint;
         display: flex;
         align-items: center;
     }
@@ -17,7 +16,15 @@
         color: #7F8285;
         letter-spacing: 0.06px;
 
-        &_rights {
+        &_pointer {
+            cursor: pointer;
+            
+            &:hover {
+                color: #E00000;
+            }
+        }
+
+        &_last {
             margin-right: 0;
             margin-left: auto;
         }
