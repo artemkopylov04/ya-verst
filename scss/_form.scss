@@ -1,0 +1,76 @@
+.form {
+
+    &__content {
+        max-width: 474px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input-label {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 6px;
+
+        &_required {
+            color: #FF3333;
+        }
+    }
+
+    &__input-text {
+        height: 36px;
+        border: 2px solid #D9D9D9;
+        border-radius: 4px;
+        width: 100%;
+
+        font-size: 13px;
+        line-height: 15px;
+        
+        padding-right: 13px;
+        padding-left: 13px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid #B3B3B3;
+        }
+    }
+
+    &__group {
+        margin-bottom: 18px;
+    }
+    
+    &__title {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 20px;
+        height: 20px;
+        margin: 8px 0;
+    }
+
+    &__description {
+        color: #7F8285;
+        height: 18px;
+        margin-bottom: 22px;
+    }
+
+    &__synchronize-block {
+        height: 60px;
+        margin-bottom: 12px;
+    }
+
+    &__github-repo {
+        height: 60px;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__btn_save {
+        width: 69px;
+        margin-right: 8px;
+    }
+
+    &__btn_cancel {
+        width: 80px;
+    }
+}

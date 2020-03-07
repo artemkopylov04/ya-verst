@@ -12,8 +12,21 @@
 		}
 
 		&_size {
-			&_desktop {
-                max-width: 824px;
+			&_m {
+				max-width: 824px;
+				
+				@media (max-width: 800px) {
+					max-width: 580px;
+					
+				}
+
+				@media (max-width: 600px) {
+					max-width: 380px;
+				}
+
+				@media (max-width: 400px) {
+					max-width: 300px;
+				}
             }
 		}
     }

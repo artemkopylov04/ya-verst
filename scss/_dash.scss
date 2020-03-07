@@ -9,7 +9,11 @@
         width: 264px;
         height: 32px;
         text-align: center;
-        font-size: 13px;
         line-height: 125%;
+        margin: 32px 0 24px;
+    }
+
+    &__settings-button {
+        width: 123px;
     }
 }

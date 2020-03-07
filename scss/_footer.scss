@@ -13,16 +13,6 @@
 
     &__link {
         margin-right: 12px;
-        color: #7F8285;
-        letter-spacing: 0.06px;
-
-        &_pointer {
-            cursor: pointer;
-            
-            &:hover {
-                color: #E00000;
-            }
-        }
 
         &_last {
             margin-right: 0;

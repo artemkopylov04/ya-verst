@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx rollup -c -w"
+    "start": "node ./app.js",
+    "dev": "npx gulp watch"
   },
   "author": "",
   "license": "ISC",

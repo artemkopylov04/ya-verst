@@ -1,15 +1,17 @@
-@use 'vars';
-@use 'fonts';
-@use 'layout';
+@use 'base/vars';
+@use 'base/fonts';
+@use 'base/layout';
+@use 'base/content';
 @use 'main';
 @use 'footer';
 @use 'header';
 @use 'dash';
+@use 'form';
 
 html, body {
     box-sizing: border-box;
     background: vars.$default;
-    width: 100%;
+    min-width: 320px;
     height: 100%;
 }
 

@@ -4,7 +4,9 @@ const fs = require('fs');
 
 const app = express();
 
-app.use('/static', express.static(`${__dirname}/css`));
+app.use('/static', express.static(`${__dirname}/css`, {
+  maxAge: 0,
+}));
 
 app.get('*', (req, res, next) => {
   const page = req.path.replace('/', '');
