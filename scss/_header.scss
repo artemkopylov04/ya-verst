@@ -2,33 +2,15 @@
     &__content {
         height: 50px;
         display: flex;
-        color: #000;
         align-items: center;
         justify-content: space-between;
     }
 
-    &__repo-name {
-        color: #7F8285;
+    &__button_margin {
+        margin-right: 8px;
     }
 
-    &__header-buttons {
+    &__buttons {
         display: flex;
-    }
-
-    &__rebuild-button {
-        width: 84px;
-    }
-
-    &__rebuild-button-icon {
-
-    }
-
-    &__settings-button {
-        margin-left: 8px;;
-        width: 87px;
-
-        &_only-icon {
-            width: 28px;
-        }
     }
 }

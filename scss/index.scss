@@ -2,6 +2,7 @@
 @use 'base/fonts';
 @use 'base/layout';
 @use 'base/content';
+@use 'base/icons';
 @use 'main';
 @use 'footer';
 @use 'header';
@@ -23,4 +24,14 @@ body {
 
 * {
     box-sizing: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }

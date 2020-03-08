@@ -17,29 +17,29 @@
                 </div>
             </div>
             <div class="form__github-repo form__group">
-                <div class="form__input-label">
+                <div class="form__label">
                     <div class="text text_size_m">
-                        GitHub repository <span class="form__input-label_required">*</span>
+                        GitHub repository <span class="text text_required">*</span>
                     </div>
                 </div>
-                <input type="text" class="form__input-text text text_size_m" placeholder="user-name/repo-name">
+                <input type="text" class="input input_text text text_size_m" placeholder="user-name/repo-name">
             </div>
             <div class="form__build-command form__group">
-                <div class="form__input-label">
+                <div class="form__label">
                     <div class="text text_size_m">Build command</div>
                 </div>
-                <input type="text" class="form__input-text text text_size_m" value="npm ci && npm run build">
+                <input type="text" class="input input_text text text_size_m" value="npm ci && npm run build">
             </div>
             <div class="form__main-branch form__group">
-                <div class="form__input-label">
+                <div class="form__label">
                     <div class="text text_size_m">Main branch</div>
                 </div>
-                <input type="text" class="form__input-text text text_size_m" value="master">
+                <input type="text" class="input input_text text text_size_m" value="master">
             </div>
             <div class="form__synchronize-block">
                 <div class="text text_size_m">
                     Synchronize every
-                    <input class="form__input-number text text_size_m">
+                    <input type="number" max="60" min="1" value="10" class="input input_number text text_size_m">
                     minutes
                 </div>
             </div>
@@ -52,24 +52,5 @@
                 </div>
             </div>
         </div>  
-    </div>
-</div>
-<div class="footer">
-    <div class="footer__content layout__container layout__container_align_center layout__container_size_m">
-        <div class="footer__link button button_link">
-            <div class="text text_size_m">
-                Support
-            </div>
-        </div>
-        <div class="footer__link button button_link">
-            <div class="text text_size_m">
-                Learning
-            </div>
-        </div>
-        <div class="footer__link footer__link_last button button_link_disabled">
-            <div class="text text_size_m">
-                © 2020 Your Name
-            </div>
-        </div>
     </div>
 </div>

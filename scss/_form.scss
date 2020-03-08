@@ -6,32 +6,8 @@
         flex-direction: column;
     }
 
-    &__input-label {
-        font-size: 13px;
-        line-height: 18px;
+    &__label {
         margin-bottom: 6px;
-
-        &_required {
-            color: #FF3333;
-        }
-    }
-
-    &__input-text {
-        height: 36px;
-        border: 2px solid #D9D9D9;
-        border-radius: 4px;
-        width: 100%;
-
-        font-size: 13px;
-        line-height: 15px;
-        
-        padding-right: 13px;
-        padding-left: 13px;
-
-        &:focus {
-            outline: none;
-            border: 2px solid #B3B3B3;
-        }
     }
 
     &__group {
@@ -63,14 +39,28 @@
 
     &__buttons {
         display: flex;
+        
+        @media (max-width: 400px) {
+            flex-direction: column;
+        }
     }
 
     &__btn_save {
         width: 69px;
         margin-right: 8px;
+
+        @media (max-width: 400px) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
     }
 
     &__btn_cancel {
         width: 80px;
+
+        @media (max-width: 400px) {
+            width: 100%
+        }
     }
 }

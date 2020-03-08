@@ -4,23 +4,23 @@ const fs = require('fs');
 
 const app = express();
 
-app.use('/static', express.static(`${__dirname}/css`, {
-  maxAge: 0,
-}));
+app.use('/static', express.static(`${__dirname}/css`));
+app.use('/static', express.static(`${__dirname}/svg`));
+
+app.set('Cache-Control', 'no-cache');
 
 app.get('*', (req, res, next) => {
   const page = req.path.replace('/', '');
 
   const htmlPath = path.resolve(__dirname, 'html', `${page}.html`);
+  const footerPath = path.resolve(__dirname, 'html', `footer.html`);
   
-  if (!fs.existsSync(htmlPath)) {
-    res.redirect('/start');
-  } else {
-    fs.readFile(htmlPath, (err, content) => {
-      if (err) {
-          next('unknowing error')
-      } else {
-          res.send(`
+  if (fs.existsSync(htmlPath)) {
+    try {
+      const content = fs.readFileSync(htmlPath);
+      const footer = fs.readFileSync(footerPath);
+
+      res.send(`
         <!doctype html>
         <html>
             <head>
@@ -29,11 +29,13 @@ app.get('*', (req, res, next) => {
             </head>
             <body>
             ${content}
+            ${footer}
             </body>
         </html>`);
-      }
-    });
-  }
+    } catch(e) {
+      next(e);
+    }
+  } else res.redirect('/start'); 
 });
 
 app.use((err, req, res) => {
