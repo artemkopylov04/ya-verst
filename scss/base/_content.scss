@@ -1,8 +1,7 @@
 @use 'vars';
 
 .button {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
@@ -10,21 +9,54 @@
     &_size {
         &_s {
             height: 28px;
+            padding-right: 13px;
+            padding-left: 13px;
         }
 
         &_m {
             height: 36px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        &_icon {
+            padding: 8px;
+        }
+
+        &_text-with-icon {
+            padding-right: 13px;
+            padding-left: 8px;
+        }
+
+        &_100 {
+            justify-content: center;
         }
     }
 
     &_primary {
         color: #000000;
         background: #E6E6E6;
+
+        &:hover {
+            background: #DBDBDB;
+        }
+
+        &:focus {
+            border: 2px solid #B3B3B3;
+        }
     }
 
     &_success {
         color: #000000; 
         background: #FFCC00;
+
+        &:hover {
+            background: #F2C200;
+        }
+
+        &:focus {
+            border: 2px solid #B38F00;
+        }
     }
 
     &_link {
@@ -39,21 +71,12 @@
             cursor: default
         }
     }
-
-    &_icon {
-        width: 28px;
-
-        &_mobile-only {
-            width: auto;
-
-            @media (max-width: 400px) {
-                width: 28px;
-            }
-        }
-    }
 }
 
 .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &_size {
         &_m {
@@ -87,25 +110,9 @@
         color: #FF3333;
     }
 
-    &_mobile {
-        &_hidden {
-            @media (max-width: 400px) {
-                display: none;
-            }
-        }
-    }
-
-    &_with_icon {
-        margin-right: 13px;
-    }
-
-    &_no-wrap {
-        white-space: nowrap;
-    }
-
-    &_overflow-hidden {
-        overflow: hidden;
-        text-overflow: ellipsis;
+    &_wrap {
+        overflow: auto;
+        white-space: normal;
     }
 }
 
@@ -122,6 +129,8 @@
     &_number {
         width: 52px;
         text-align: right;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     &:focus {
@@ -136,10 +145,30 @@
             width: 12px;
             height: 12px;
         }
+
+        &_m {
+            width: 16px;
+            height: 16px;
+        }
+
+        &_l {
+            width: 24px;
+            height: 24px;
+        }
     }
 
-    &_with_text {    
-        margin-left: 8px;
+    &_with-text {
         margin-right: 5px;
+    }
+}
+
+.divider {
+    background: #F0F2F3;
+    height: 1px;
+
+    &_desktop_hidden {
+        @media (min-width: 600px) {
+            display: none;
+        }
     }
 }

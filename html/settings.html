@@ -1,18 +1,18 @@
 <div class="header">
-    <div class="header__content layout__container layout__container_align_center layout__container_size_m">
+    <div class="header__content flex flex_jc_space_between flex_ai_center layout_size_m layout_center">
         <div class="header__title">
             <div class="text text_size_xl text_color_title">School CI server</div>
         </div>
     </div>
 </div>
-<div class="layout layout__height_100">
-    <div class="form layout__container layout__container_align_center layout__container_size_m">
-        <div class="form__content">
+<div class="flex flex-1">
+    <div class="flex flex-1 flex_jc_start layout_size_m layout_center">
+        <div class="form__content flex flex_direction_column">
             <div class="form__title">
-                <div class="text text_size_l">Settings</div>
+                <div class="text text_size_l text_wrap">Settings</div>
             </div>
             <div class="form__description">
-                <div class="text text_size_m">
+                <div class="text text_size_m text_wrap">
                     Configure repository connection and synchronization settings.
                 </div>
             </div>
@@ -43,13 +43,9 @@
                     minutes
                 </div>
             </div>
-            <div class="form__buttons">
-                <div class="form__btn_save button button_success button_size_m">
-                    <div class="text text_size_m">Save</div>
-                </div>
-                <div class="form__btn_cancel button button_primary button_size_m">
-                    <div class="text text_size_m">Cancel</div>
-                </div>
+            <div class="form__buttons flex flex_mobile_direction_column">
+                <input type="submit" value="Save" class="form__btn_save button button_success button_size_m button_size_100 text text_size_m">
+                <input type="submit" value="Cancel" class="form__btn_cancel button button_primary button_size_m button_size_100 text text_size_m">
             </div>
         </div>  
     </div>

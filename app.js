@@ -4,10 +4,17 @@ const fs = require('fs');
 
 const app = express();
 
-app.use('/static', express.static(`${__dirname}/css`));
-app.use('/static', express.static(`${__dirname}/svg`));
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private')
+  next()
+})
 
-app.set('Cache-Control', 'no-cache');
+app.use('/static', express.static(`${__dirname}/css`, {
+  etag: false,
+}));
+app.use('/static', express.static(`${__dirname}/svg`, {
+  etag: false,
+}));
 
 app.get('*', (req, res, next) => {
   const page = req.path.replace('/', '');

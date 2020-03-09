@@ -16,58 +16,126 @@
   font-weight: 700;
   font-style: normal;
 }
-.layout {
-  display: flex;
-  flex-direction: column;
-}
-.layout__container {
-  width: 100%;
-}
-.layout__container_align_center {
+.layout_center {
   margin: 0 auto;
 }
-.layout__container_size_m {
+.layout_size_m {
   max-width: 824px;
 }
 @media (max-width: 800px) {
-  .layout__container_size_m {
+  .layout_size_m {
     max-width: 580px;
   }
 }
 @media (max-width: 600px) {
-  .layout__container_size_m {
+  .layout_size_m {
     max-width: 380px;
   }
 }
 @media (max-width: 400px) {
-  .layout__container_size_m {
+  .layout_size_m {
     max-width: 300px;
   }
 }
-.layout__height_100 {
-  height: 100%;
+@media (max-width: 600px) {
+  .layout_mobile_hidden {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .layout_desktop_hidden {
+    display: none;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-0 {
+  flex: 0;
+}
+.flex_direction_column {
+  flex-direction: column;
+}
+.flex_jc_center {
+  justify-content: center;
+}
+.flex_jc_space_between {
+  justify-content: space-between;
+}
+.flex_jc_start {
+  justify-content: flex-start;
+}
+.flex_ai_center {
+  align-items: center;
+}
+@media (max-width: 400px) {
+  .flex_mobile_direction_column {
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .flex_mobile_ai_start {
+    align-items: flex-start;
+  }
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
 }
 
 .button {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
   border-radius: 4px;
   cursor: pointer;
 }
 .button_size_s {
   height: 28px;
+  padding-right: 13px;
+  padding-left: 13px;
 }
 .button_size_m {
   height: 36px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.button_size_icon {
+  padding: 8px;
+}
+.button_size_text-with-icon {
+  padding-right: 13px;
+  padding-left: 8px;
+}
+.button_size_100 {
+  justify-content: center;
 }
 .button_primary {
   color: #000000;
   background: #E6E6E6;
 }
+.button_primary:hover {
+  background: #DBDBDB;
+}
+.button_primary:focus {
+  border: 2px solid #B3B3B3;
+}
 .button_success {
   color: #000000;
   background: #FFCC00;
+}
+.button_success:hover {
+  background: #F2C200;
+}
+.button_success:focus {
+  border: 2px solid #B38F00;
 }
 .button_link {
   color: #7F8285;
@@ -79,18 +147,12 @@
   color: #7F8285;
   cursor: default;
 }
-.button_icon {
-  width: 28px;
-}
-.button_icon_mobile-only {
-  width: auto;
-}
-@media (max-width: 400px) {
-  .button_icon_mobile-only {
-    width: 28px;
-  }
-}
 
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .text_size_m {
   font-size: 13px;
 }
@@ -114,20 +176,9 @@
 .text_required {
   color: #FF3333;
 }
-@media (max-width: 400px) {
-  .text_mobile_hidden {
-    display: none;
-  }
-}
-.text_with_icon {
-  margin-right: 13px;
-}
-.text_no-wrap {
-  white-space: nowrap;
-}
-.text_overflow-hidden {
-  overflow: hidden;
-  text-overflow: ellipsis;
+.text_wrap {
+  overflow: auto;
+  white-space: normal;
 }
 
 .input {
@@ -142,6 +193,8 @@
 .input_number {
   width: 52px;
   text-align: right;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .input:focus {
   outline: none;
@@ -152,9 +205,26 @@
   width: 12px;
   height: 12px;
 }
-.icon_with_text {
-  margin-left: 8px;
+.icon_size_m {
+  width: 16px;
+  height: 16px;
+}
+.icon_size_l {
+  width: 24px;
+  height: 24px;
+}
+.icon_with-text {
   margin-right: 5px;
+}
+
+.divider {
+  background: #F0F2F3;
+  height: 1px;
+}
+@media (min-width: 600px) {
+  .divider_desktop_hidden {
+    display: none;
+  }
 }
 
 .settings-icon {
@@ -169,6 +239,43 @@
   background: url("/static/12_play.svg");
 }
 
+.status-done {
+  background: url("/static/done_24.svg");
+}
+
+.status-fail {
+  background: url("/static/fail_24.svg");
+}
+
+.status-clock {
+  background: url("/static/clock_24.svg");
+}
+
+.commit-icon {
+  background: url("/static/16_code-commit.svg");
+}
+
+.user-icon {
+  background: url("/static/16_user.svg");
+}
+
+.calendar-icon {
+  background: url("/static/16_calendar.svg");
+}
+
+.watch-icon {
+  background: url("/static/16_stopwatch.svg");
+}
+
+.build-list__more {
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .build-list__more {
+    display: flex;
+  }
+}
+
 .build-info {
   height: 100px;
   background: #FFFFFF;
@@ -176,68 +283,86 @@
   border-radius: 6px;
 }
 
-.footer {
-  background: #F0F2F3;
-  margin-top: auto;
-}
-.footer__content {
+.build-log {
+  font-family: Hack;
+  background: #F2F2F2;
+  border-radius: 6px;
+  opacity: 0.9;
+  margin: 0;
+  overflow-x: scroll;
   font-size: 13px;
-  line-height: 16px;
-  height: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (max-width: 400px) {
-  .footer__content {
-    height: 68px;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-.footer__links {
-  display: flex;
-}
-.footer__link {
-  margin-right: 12px;
 }
 
-.header__content {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header__button_margin {
-  margin-right: 8px;
-}
-.header__buttons {
-  display: flex;
-}
-
-.dash {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.dash__message {
-  width: 264px;
-  height: 32px;
+.dash-message {
+  max-width: 264px;
   text-align: center;
   line-height: 125%;
   margin: 32px 0 24px;
 }
-.dash__settings-button {
-  width: 123px;
+
+.card {
+  padding: 12px 24px 4px;
+  min-height: 60px;
+  cursor: pointer;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 1px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
+  border-radius: 6px;
+}
+.card__extended_false:hover {
+  box-shadow: 0px 2px 8px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
+}
+.card__extended_true {
+  margin-bottom: 12px;
+}
+.card__status, .card__commit-date {
+  margin-right: 10px;
+}
+.card__branch-hash {
+  color: #595959;
+  margin-right: 10px;
+}
+.card__branch-name, .card__branch-icon {
+  margin-right: 4px;
+}
+.card__user-name, .card__user-icon {
+  margin-right: 4px;
+}
+.card__build-duration, .card__commit-date {
+  color: #595959;
+}
+.card__build-duration-icon, .card__commit-date-icon {
+  margin-right: 4px;
+}
+.card__ticket {
+  font-size: 18px;
+  margin-right: 4px;
+}
+.card__ticket_done {
+  color: #00B341;
+}
+.card__ticket_fail {
+  color: #FF3333;
+}
+.card__ticket_clock {
+  color: #FF9A00;
+}
+@media (max-width: 600px) {
+  .card__info {
+    flex-direction: column;
+  }
+  .card__commit-message, .card__commit-about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .card__commit-times {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .form__content {
   max-width: 474px;
-  display: flex;
-  flex-direction: column;
 }
 .form__label {
   margin-bottom: 6px;
@@ -247,8 +372,6 @@
 }
 .form__title {
   font-weight: bold;
-  font-size: 15px;
-  line-height: 20px;
   height: 20px;
   margin: 8px 0;
 }
@@ -264,32 +387,37 @@
 .form__github-repo {
   height: 60px;
 }
-.form__buttons {
-  display: flex;
-}
-@media (max-width: 400px) {
-  .form__buttons {
-    flex-direction: column;
-  }
-}
 .form__btn_save {
-  width: 69px;
   margin-right: 8px;
 }
 @media (max-width: 400px) {
   .form__btn_save {
-    width: 100%;
     margin-right: 0;
     margin-bottom: 12px;
   }
 }
-.form__btn_cancel {
-  width: 80px;
+.form__btn_save, .form__btn_cancel {
+  outline: none;
+  border: 0;
 }
-@media (max-width: 400px) {
-  .form__btn_cancel {
-    width: 100%;
-  }
+.form__btn_save:focus, .form__btn_cancel:focus {
+  padding-right: 18px;
+  padding-left: 18px;
+}
+.form__btn_save:disabled, .form__btn_cancel:disabled {
+  background: #F2F2F2;
+}
+
+.header__content {
+  height: 50px;
+}
+
+.footer {
+  background: #F0F2F3;
+}
+.footer__link {
+  padding: 0;
+  margin-right: 12px;
 }
 
 html, body {

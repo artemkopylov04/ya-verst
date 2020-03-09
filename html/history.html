@@ -1,18 +1,84 @@
 <div class="header">
-    <div class="header__content layout__container layout__container_align_center layout__container_size_m">
+    <div class="header__content flex flex_jc_space_between flex_ai_center layout_size_m layout_center">
         <div class="header__title">
             <div class="text text_size_xl text_color_repo">philip1967/my-awesome-repo</div>
         </div>
-        <div class="header__buttons">
-            <div class="header__button_margin button button_size_s button_primary">
-                <div class="play-icon icon icon_size_s icon_with_text"></div>
-                <div class="text text_size_m text_with_icon text_mobile_hidden text_no-wrap">Run build</div>
+        <div class="flex">
+            <div class="layout_mobile_hidden mr-8">
+                <div class="button button_primary button_size_s button_size_text-with-icon">
+                    <div class="play-icon icon icon_size_s icon_with-text"></div>
+                    <div class="text text_size_m">Run build</div>
+                </div>
             </div>
-            <div class="button button_size_s button_primary button_icon">
+            <div class="layout_desktop_hidden mr-8">
+                <div class="button button_primary button_icon button_size_icon">
+                    <div class="play-icon icon icon_size_s"></div>
+                </div>
+            </div>
+            <div class="button button_primary button_icon button_size_icon">
                 <div class="settings-icon icon icon_size_s"></div>
             </div>
         </div>
     </div>
 </div>
-<div class="layout layout__height_100">
+<div class="flex flex-1">
+    <div class="build-list flex flex-1 flex_direction_column flex_jc_start layout_size_m layout_center">
+        <div class="build-list__item card card__extended_false flex mb-8">
+            <div class="card__status">
+                <div class="status-done icon icon_size_l"></div>
+            </div>
+            <div class="card__info flex flex-1 flex_jc_space_between">
+                <div class="card__commit-info flex flex_direction_column flex_jc_space_between">
+                    <div class="card__commit-message flex flex_jc_start flex_ai_center">
+                        <div class="card__ticket card__ticket_done text mb-8">#1368</div>
+                        <div class="card__message text text_size_l mb-8">add documentation for postgres scaler</div>
+                    </div>
+                    <div class="card__commit-about flex flex_jc_start flex_ai_center">
+                        <div class="card__branch-info flex mb-8">
+                            <div class="card__branch-icon commit-icon icon icon_size_m"></div>
+                            <div class="card__branch-name text text_size_m">master</div>
+                            <div class="card__branch-hash text text_size_m">9c9f0b9</div>
+                        </div>
+                        <div class="card__commiter flex mb-8">
+                            <div class="card__user-icon user-icon icon icon_size_m"></div>
+                            <div class="card__user-name text text_size_m">Philip Kirkorov</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider divider_desktop_hidden mb-8"></div>
+                <div class="card__commit-times flex flex_direction_column flex_jc_space_between">
+                    <div class="card__commit-date flex flex_jc_start flex_ai_center mb-8">
+                        <div class="card__commit-date-icon calendar-icon icon icon_size_m"></div>
+                        <div class="text text_size_m">21 янв, 03:06</div>
+                    </div>
+                    <div class="card__build-duration flex flex_jc_start flex_ai_center mb-8 ">
+                        <div class="card__build-duration-icon watch-icon icon icon_size_m"></div>
+                        <div class="text text_size_m">1 ч 20 мин</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="build-list__item card card__extended_false flex mb-8">
+            <div class="card__status">
+                <div class="status-fail icon icon_size_l"></div>
+            </div>
+        </div>
+        <div class="build-list__item card card__extended_false flex mb-8">
+            <div class="card__status">
+                <div class="status-done icon icon_size_l"></div>
+            </div>
+        </div>
+        <div class="build-list__item card card__extended_false flex mb-8">
+            <div class="card__status">
+                <div class="status-clock icon icon_size_l"></div>
+            </div>
+        </div>
+        <div class="build-list__item card card__extended_false flex mb-8"></div>
+        <div class="build-list__item card card__extended_false flex mb-8"></div>
+        <div class="build-list__more">
+            <div class="button button_size_s button_primary button_size_100 flex-1">
+                <div class="text text_size_m">Show more</div>
+            </div>
+        </div>
+    </div>
 </div>
