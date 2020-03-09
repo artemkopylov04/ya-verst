@@ -1,9 +1,9 @@
-@use 'base/vars';
-@use 'base/fonts';
-@use 'base/layout';
-@use 'base/content';
-@use 'base/icons';
-@use 'main';
+@use 'vars';
+@use 'fonts';
+@use 'layout';
+@use 'block';
+@use 'icons';
+@use 'content';
 
 html, body {
     box-sizing: border-box;
@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 
 * {
     box-sizing: inherit;
