@@ -35,12 +35,13 @@
 .card {
     padding: 12px 24px 4px;
     min-height: 60px;
-    cursor: pointer;
     background: #FFFFFF;
     box-shadow: 0px 1px 1px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);  
     border-radius: 6px;
 
     &__extended_false {
+        cursor: pointer;
+
         &:hover {
             box-shadow: 0px 2px 8px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);    
         }
@@ -58,21 +59,25 @@
         &-hash {
             color: #595959;
             margin-right: 10px;
+            max-width: 120px;
         }
 
         &-name, &-icon {
+            max-width: 120px;
             margin-right: 4px;
         }
     }
 
     &__user {
         &-name, &-icon {
+            max-width: 120px;
             margin-right: 4px;
         }
     }
 
     &__build-duration, &__commit-date {
         color: #595959;
+        max-width: 120px;
     }
 
     &__build-duration-icon, &__commit-date-icon {
@@ -114,20 +119,28 @@
     }
 }
 
-
-
 .form {
-
     &__content {
         max-width: 474px;
+    }
+
+    &__group {
+        margin-bottom: 18px;
     }
 
     &__label {
         margin-bottom: 6px;
     }
 
-    &__group {
-        margin-bottom: 18px;
+    &__input {
+        position: relative;
+
+        &_clear-icon {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     }
     
     &__title {
@@ -177,7 +190,7 @@
 
 .header {
     &__content {
-        height: 50px;
+        min-height: 50px;
     }
 }
 
