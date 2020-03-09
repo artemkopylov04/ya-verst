@@ -1,13 +1,13 @@
-@use 'vars';
 @use 'fonts';
+@use 'icons';
+
 @use 'layout';
 @use 'block';
-@use 'icons';
 @use 'content';
 
 html, body {
     box-sizing: border-box;
-    background: vars.$default;
+    background: #fff;
     min-width: 320px;
     height: 100%;
 }
@@ -17,7 +17,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 
 * {
     box-sizing: inherit;

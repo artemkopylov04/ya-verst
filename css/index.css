@@ -16,6 +16,50 @@
   font-weight: 700;
   font-style: normal;
 }
+.settings-icon {
+  background: url("/static/cog_1.svg");
+}
+
+.rebuild-icon {
+  background: url("/static/12_rebuild.svg");
+}
+
+.play-icon {
+  background: url("/static/12_play.svg");
+}
+
+.clear-icon {
+  background: url("/static/16_clear.svg");
+}
+
+.status-done {
+  background: url("/static/done_24.svg");
+}
+
+.status-fail {
+  background: url("/static/fail_24.svg");
+}
+
+.status-clock {
+  background: url("/static/clock_24.svg");
+}
+
+.commit-icon {
+  background: url("/static/16_code-commit.svg");
+}
+
+.user-icon {
+  background: url("/static/16_user.svg");
+}
+
+.calendar-icon {
+  background: url("/static/16_calendar.svg");
+}
+
+.watch-icon {
+  background: url("/static/16_stopwatch.svg");
+}
+
 .layout_center {
   margin: 0 auto;
 }
@@ -190,8 +234,7 @@
   width: 52px;
   padding: 0 13px;
   text-align: right;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0 5px;
 }
 .input:focus {
   outline: none;
@@ -227,50 +270,6 @@
   }
 }
 
-.settings-icon {
-  background: url("/static/cog_1.svg");
-}
-
-.rebuild-icon {
-  background: url("/static/12_rebuild.svg");
-}
-
-.play-icon {
-  background: url("/static/12_play.svg");
-}
-
-.clear-icon {
-  background: url("/static/16_clear.svg");
-}
-
-.status-done {
-  background: url("/static/done_24.svg");
-}
-
-.status-fail {
-  background: url("/static/fail_24.svg");
-}
-
-.status-clock {
-  background: url("/static/clock_24.svg");
-}
-
-.commit-icon {
-  background: url("/static/16_code-commit.svg");
-}
-
-.user-icon {
-  background: url("/static/16_user.svg");
-}
-
-.calendar-icon {
-  background: url("/static/16_calendar.svg");
-}
-
-.watch-icon {
-  background: url("/static/16_stopwatch.svg");
-}
-
 .build-list__more {
   margin-bottom: 20px;
 }
@@ -278,13 +277,6 @@
   .build-list__more {
     display: flex;
   }
-}
-
-.build-info {
-  height: 100px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 1px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
-  border-radius: 6px;
 }
 
 .build-log {
@@ -307,7 +299,6 @@
 .card {
   padding: 12px 24px 4px;
   min-height: 60px;
-  background: #FFFFFF;
   box-shadow: 0px 1px 1px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
   border-radius: 6px;
 }
