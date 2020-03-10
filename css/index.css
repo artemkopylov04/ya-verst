@@ -65,10 +65,15 @@
   min-width: 320px;
   padding: 0 16px;
 }
-.size_m_p0 {
+.size_p0 {
   padding: 0;
 }
 
+@media (min-width: 576px) {
+  .size_desktop_p {
+    padding: 0 16px;
+  }
+}
 .flex {
   display: flex;
 }
@@ -204,7 +209,7 @@
   box-shadow: 0px 2px 8px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
 }
 .card__extended_true {
-  margin: 0 16px 12px 16px;
+  margin-bottom: 12px;
 }
 .card__status, .card__commit-date {
   margin-right: 10px;
@@ -345,16 +350,14 @@
 
 .log {
   font-family: Hack;
-  font-size: 10px;
   line-height: 20px;
   letter-spacing: 0.33px;
+  color: #000;
+  opacity: 0.9;
   background: #F2F2F2;
   border-radius: 6px;
   overflow-x: scroll;
   margin: 0;
-  font-size: 13px;
-  color: #000;
-  opacity: 0.9;
 }
 
 .text_size_m {

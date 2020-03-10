@@ -5,9 +5,19 @@
 		max-width: 824px;
 		min-width: 320px;
 		padding: 0 16px;
+	}
 
-		&_p0 {
-			padding: 0;
+	&_p0 {
+		padding: 0;
+	}
+}
+
+@media (min-width: vars.$breakpoint_small) {
+	.size {
+		&_desktop {
+			&_p {
+				padding: 0 16px;
+			}
 		}
 	}
 }
